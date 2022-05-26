@@ -1,13 +1,142 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code:wght@200;400&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+  --color-bg : #814f9e;
+  --color-bg-variant: #2c2c6c;
+  --primary-color: #4db5ff;
+  --primary-color-variant: rgba(77, 181, 255, 0.4);
+  --defaut-color: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=M+PLUS+1+Code:wght@200;400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> */
+
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'M PLUS 1 Code', sans-serif;
+font-family:  */
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--defaut-color) !important;
+  line-height: 1.7;
+  background-image: url(../src/assets/bg-texture.png);
+}
+
+/* ====== GENERAL STYLE ======*/
+
+.container{
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 500;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+section{
+  margin-top: 8rem;
+}
+
+section > h2, section > h5{
+  text-align: center;
+  color: var(--color-light);
+}
+
+section > h2{
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.text-light{
+  color: var(--color-light);
+}
+
+a{
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover{
+  color: var(--defaut-color);
+}
+
+.btn{
+  width: max-content;
+  color: var(--primary-color);
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.btn:hover{
+  background: var(--defaut-color);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary{
+  background: var(--primary-color);
+  color: var(--color-bg);
+}
+
+img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ======== MEIDA QUERIES FOR MEDIUM DEVICE ============== */
+@media screen and (max-width: 1024px) {
+  .container{
+    width: var(--container-width-md);
+  }
+
+  section{
+    margin-top: 6rem;
+  }
+}
+
+/* ======== MEIDA QUERIES FOR SMALL DEVICE ============== */
+@media screen and (max-width: 600px) {
+  .container{
+    width: var(--container-width-ms);
+  }
+
+  section > h2{
+    margin-bottom: 2rem;
+  }
 }

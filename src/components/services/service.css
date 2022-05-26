@@ -1,0 +1,77 @@
+#service{
+  background: url(../../assets/bg-6.jpg);
+  padding: 2rem auto !important;
+}
+
+.services__container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.service{
+  background: var(--color-bg-variant);
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid var(--primary-color);
+  height: fit-content;
+  transition: var(--transition);
+}
+ 
+.service:hover{
+  background: transparent;
+  border-color: 1px solid var(--primary-color-variant);
+  cursor: default;
+}
+
+.service__head{
+  background: var(--primary-color);
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service__head h3{
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-bg);
+}
+
+.service__list{
+  padding: 2rem;
+}
+
+.service__list li{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .8rem;
+}
+
+.service__list-icon{
+  color: var(--primary-color);
+  margin-top: 2px;
+}
+
+.service__list p{
+  font-size: .9rem;
+  /* color: var(--default-color); */
+}
+
+/* ======== MEIDA QUERIES FOR MEDIUM DEVICE ============== */
+@media screen and (max-width: 1024px) {
+  .services__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .service{
+    height: auto;
+  }
+}
+
+/* ======== MEIDA QUERIES FOR SMALL DEVICE ============== */
+@media screen and (max-width: 600px) {
+  .services__container{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
